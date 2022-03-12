@@ -1,311 +1,309 @@
 import * as React from 'react'
-import {
-  FaAddressBook,
-  FaAddressCard,
-  FaAngleDoubleDown,
-  FaAngleDoubleLeft,
-  FaAngleDoubleRight,
-  FaAngleDown,
-  FaAngleLeft,
-  FaAngleRight,
-  FaAngleUp,
-  FaArchive,
-  FaArrowAltCircleDown,
-  FaArrowAltCircleLeft,
-  FaArrowAltCircleRight,
-  FaArrowAltCircleUp,
-  FaArrowCircleDown,
-  FaArrowDown,
-  FaArrowLeft,
-  FaArrowRight,
-  FaArrowUp,
-  FaArrowsAlt,
-  FaArrowsAltH,
-  FaArrowsAltV,
-  FaAsterisk,
-  FaBan,
-  FaBars,
-  FaBell,
-  FaBellSlash,
-  FaBirthdayCake,
-  FaBolt,
-  FaBook,
-  FaBookOpen,
-  FaBookmark,
-  FaBox,
-  FaBoxOpen,
-  FaBoxes,
-  FaBriefcase,
-  FaBuilding,
-  FaBullhorn,
-  FaBus,
-  FaBusAlt,
-  FaBusinessTime,
-  FaCalculator,
-  FaCalendar,
-  FaCalendarAlt,
-  FaCalendarCheck,
-  FaCalendarDay,
-  FaCalendarMinus,
-  FaCalendarPlus,
-  FaCalendarTimes,
-  FaCalendarWeek,
-  FaCamera,
-  FaCar,
-  FaCarAlt,
-  FaCarSide,
-  FaCaretDown,
-  FaCaretLeft,
-  FaCaretRight,
-  FaCaretSquareDown,
-  FaCaretSquareLeft,
-  FaCaretSquareRight,
-  FaCaretSquareUp,
-  FaCaretUp,
-  FaChartArea,
-  FaChartBar,
-  FaChartLine,
-  FaChartPie,
-  FaCheck,
-  FaCheckCircle,
-  FaCheckSquare,
-  FaChevronCircleDown,
-  FaChevronCircleLeft,
-  FaChevronCircleRight,
-  FaChevronCircleUp,
-  FaChevronDown,
-  FaChevronLeft,
-  FaChevronRight,
-  FaChevronUp,
-  FaCircle,
-  FaClipboard,
-  FaClipboardCheck,
-  FaClipboardList,
-  FaClock,
-  FaClone,
-  FaCloud,
-  FaCloudDownloadAlt,
-  FaCloudUploadAlt,
-  FaCode,
-  FaCog,
-  FaCogs,
-  FaCoins,
-  FaColumns,
-  FaComment,
-  FaCommentAlt,
-  FaCommentDots,
-  FaCommentSlash,
-  FaComments,
-  FaCompress,
-  FaCopy,
-  FaCreditCard,
-  FaCube,
-  FaCubes,
-  FaDatabase,
-  FaDoorClosed,
-  FaDoorOpen,
-  FaEdit,
-  FaEllipsisH,
-  FaEllipsisV,
-  FaEnvelope,
-  FaEnvelopeOpen,
-  FaEnvelopeOpenText,
-  FaExchangeAlt,
-  FaExclamation,
-  FaExclamationCircle,
-  FaExclamationTriangle,
-  FaExpand,
-  FaExpandArrowsAlt,
-  FaExternalLinkAlt,
-  FaEye,
-  FaEyeSlash,
-  FaFile,
-  FaFileAlt,
-  FaFileArchive,
-  FaFileDownload,
-  FaFileExport,
-  FaFileImport,
-  FaFileUpload,
-  FaFilter,
-  FaFlag,
-  FaFolder,
-  FaFolderMinus,
-  FaFolderOpen,
-  FaFolderPlus,
-  FaFont,
-  FaForward,
-  FaGift,
-  FaGlobe,
-  FaGraduationCap,
-  FaGripHorizontal,
-  FaGripLines,
-  FaGripLinesVertical,
-  FaGripVertical,
-  FaHandPaper,
-  FaHandPointDown,
-  FaHandPointLeft,
-  FaHandPointRight,
-  FaHandPointUp,
-  FaHands,
-  FaHandshake,
-  FaHeart,
-  FaHistory,
-  FaHome,
-  FaHospital,
-  FaHospitalAlt,
-  FaHourglass,
-  FaHourglassEnd,
-  FaHourglassHalf,
-  FaHourglassStart,
-  FaIdBadge,
-  FaIdCard,
-  FaIdCardAlt,
-  FaImage,
-  FaImages,
-  FaInbox,
-  FaInfo,
-  FaInfoCircle,
-  FaKey,
-  FaKeyboard,
-  FaLightbulb,
-  FaLink,
-  FaList,
-  FaListAlt,
-  FaListOl,
-  FaListUl,
-  FaLock,
-  FaLockOpen,
-  FaLongArrowAltDown,
-  FaLongArrowAltLeft,
-  FaLongArrowAltRight,
-  FaLongArrowAltUp,
-  FaMedkit,
-  FaMinus,
-  FaMinusCircle,
-  FaMinusSquare,
-  FaMobile,
-  FaMobileAlt,
-  FaMoneyBill,
-  FaMoneyBillAlt,
-  FaMoneyBillWave,
-  FaMoneyBillWaveAlt,
-  FaMoneyCheck,
-  FaMoneyCheckAlt,
-  FaPaperPlane,
-  FaPaperclip,
-  FaPaste,
-  FaPen,
-  FaPencilAlt,
-  FaPhone,
-  FaPhoneSlash,
-  FaPiggyBank,
-  FaPlane,
-  FaPlay,
-  FaPlayCircle,
-  FaPlus,
-  FaPlusCircle,
-  FaPlusSquare,
-  FaPoll,
-  FaPollH,
-  FaPortrait,
-  FaPowerOff,
-  FaPrint,
-  FaQrcode,
-  FaQuestion,
-  FaQuestionCircle,
-  FaRandom,
-  FaReceipt,
-  FaRedo,
-  FaRedoAlt,
-  FaRegDotCircle,
-  FaReply,
-  FaReplyAll,
-  FaRocket,
-  FaSave,
-  FaSearch,
-  FaSearchMinus,
-  FaSearchPlus,
-  FaShare,
-  FaShareAlt,
-  FaShareSquare,
-  FaShieldAlt,
-  FaShoppingBag,
-  FaShoppingBasket,
-  FaShoppingCart,
-  FaSignInAlt,
-  FaSignOutAlt,
-  FaSlidersH,
-  FaSort,
-  FaSortAlphaDown,
-  FaSortAlphaUp,
-  FaSortAmountDown,
-  FaSortAmountUp,
-  FaSortDown,
-  FaSortNumericDown,
-  FaSortNumericUp,
-  FaSortUp,
-  FaStar,
-  FaStepBackward,
-  FaStepForward,
-  FaStickyNote,
-  FaStop,
-  FaStopCircle,
-  FaStream,
-  FaSubway,
-  FaSync,
-  FaSyncAlt,
-  FaTable,
-  FaTablet,
-  FaTabletAlt,
-  FaTachometerAlt,
-  FaTag,
-  FaTags,
-  FaTasks,
-  FaTaxi,
-  FaTh,
-  FaThLarge,
-  FaThList,
-  FaTimes,
-  FaTimesCircle,
-  FaToolbox,
-  FaTools,
-  FaTrash,
-  FaTrashAlt,
-  FaTrashRestore,
-  FaTrashRestoreAlt,
-  FaUndo,
-  FaUndoAlt,
-  FaUnlink,
-  FaUnlock,
-  FaUnlockAlt,
-  FaUser,
-  FaUserAlt,
-  FaUserAltSlash,
-  FaUserCheck,
-  FaUserCircle,
-  FaUserClock,
-  FaUserCog,
-  FaUserEdit,
-  FaUserMinus,
-  FaUserPlus,
-  FaUserSlash,
-  FaUsers,
-  FaUsersCog,
-  FaVideo,
-  FaVideoSlash,
-  FaVolumeDown,
-  FaVolumeMute,
-  FaVolumeOff,
-  FaVolumeUp,
-  FaWallet,
-  FaWindowClose,
-  FaWindowMaximize,
-  FaWindowMinimize,
-  FaWindowRestore,
-  FaWrench,
-  FaYenSign,
-} from 'react-icons/fa'
-import type { IconType } from 'react-icons'
+import { FaAddressBook } from '@react-icons/all-files/fa/FaAddressBook'
+import { FaAddressCard } from '@react-icons/all-files/fa/FaAddressCard'
+import { FaAngleDoubleDown } from '@react-icons/all-files/fa/FaAngleDoubleDown'
+import { FaAngleDoubleLeft } from '@react-icons/all-files/fa/FaAngleDoubleLeft'
+import { FaAngleDoubleRight } from '@react-icons/all-files/fa/FaAngleDoubleRight'
+import { FaAngleDown } from '@react-icons/all-files/fa/FaAngleDown'
+import { FaAngleLeft } from '@react-icons/all-files/fa/FaAngleLeft'
+import { FaAngleRight } from '@react-icons/all-files/fa/FaAngleRight'
+import { FaAngleUp } from '@react-icons/all-files/fa/FaAngleUp'
+import { FaArchive } from '@react-icons/all-files/fa/FaArchive'
+import { FaArrowAltCircleDown } from '@react-icons/all-files/fa/FaArrowAltCircleDown'
+import { FaArrowAltCircleLeft } from '@react-icons/all-files/fa/FaArrowAltCircleLeft'
+import { FaArrowAltCircleRight } from '@react-icons/all-files/fa/FaArrowAltCircleRight'
+import { FaArrowAltCircleUp } from '@react-icons/all-files/fa/FaArrowAltCircleUp'
+import { FaArrowCircleDown } from '@react-icons/all-files/fa/FaArrowCircleDown'
+import { FaArrowDown } from '@react-icons/all-files/fa/FaArrowDown'
+import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft'
+import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
+import { FaArrowUp } from '@react-icons/all-files/fa/FaArrowUp'
+import { FaArrowsAlt } from '@react-icons/all-files/fa/FaArrowsAlt'
+import { FaArrowsAltH } from '@react-icons/all-files/fa/FaArrowsAltH'
+import { FaArrowsAltV } from '@react-icons/all-files/fa/FaArrowsAltV'
+import { FaAsterisk } from '@react-icons/all-files/fa/FaAsterisk'
+import { FaBan } from '@react-icons/all-files/fa/FaBan'
+import { FaBars } from '@react-icons/all-files/fa/FaBars'
+import { FaBell } from '@react-icons/all-files/fa/FaBell'
+import { FaBellSlash } from '@react-icons/all-files/fa/FaBellSlash'
+import { FaBirthdayCake } from '@react-icons/all-files/fa/FaBirthdayCake'
+import { FaBolt } from '@react-icons/all-files/fa/FaBolt'
+import { FaBook } from '@react-icons/all-files/fa/FaBook'
+import { FaBookOpen } from '@react-icons/all-files/fa/FaBookOpen'
+import { FaBookmark } from '@react-icons/all-files/fa/FaBookmark'
+import { FaBox } from '@react-icons/all-files/fa/FaBox'
+import { FaBoxOpen } from '@react-icons/all-files/fa/FaBoxOpen'
+import { FaBoxes } from '@react-icons/all-files/fa/FaBoxes'
+import { FaBriefcase } from '@react-icons/all-files/fa/FaBriefcase'
+import { FaBuilding } from '@react-icons/all-files/fa/FaBuilding'
+import { FaBullhorn } from '@react-icons/all-files/fa/FaBullhorn'
+import { FaBus } from '@react-icons/all-files/fa/FaBus'
+import { FaBusAlt } from '@react-icons/all-files/fa/FaBusAlt'
+import { FaBusinessTime } from '@react-icons/all-files/fa/FaBusinessTime'
+import { FaCalculator } from '@react-icons/all-files/fa/FaCalculator'
+import { FaCalendar } from '@react-icons/all-files/fa/FaCalendar'
+import { FaCalendarAlt } from '@react-icons/all-files/fa/FaCalendarAlt'
+import { FaCalendarCheck } from '@react-icons/all-files/fa/FaCalendarCheck'
+import { FaCalendarDay } from '@react-icons/all-files/fa/FaCalendarDay'
+import { FaCalendarMinus } from '@react-icons/all-files/fa/FaCalendarMinus'
+import { FaCalendarPlus } from '@react-icons/all-files/fa/FaCalendarPlus'
+import { FaCalendarTimes } from '@react-icons/all-files/fa/FaCalendarTimes'
+import { FaCalendarWeek } from '@react-icons/all-files/fa/FaCalendarWeek'
+import { FaCamera } from '@react-icons/all-files/fa/FaCamera'
+import { FaCar } from '@react-icons/all-files/fa/FaCar'
+import { FaCarAlt } from '@react-icons/all-files/fa/FaCarAlt'
+import { FaCarSide } from '@react-icons/all-files/fa/FaCarSide'
+import { FaCaretDown } from '@react-icons/all-files/fa/FaCaretDown'
+import { FaCaretLeft } from '@react-icons/all-files/fa/FaCaretLeft'
+import { FaCaretRight } from '@react-icons/all-files/fa/FaCaretRight'
+import { FaCaretSquareDown } from '@react-icons/all-files/fa/FaCaretSquareDown'
+import { FaCaretSquareLeft } from '@react-icons/all-files/fa/FaCaretSquareLeft'
+import { FaCaretSquareRight } from '@react-icons/all-files/fa/FaCaretSquareRight'
+import { FaCaretSquareUp } from '@react-icons/all-files/fa/FaCaretSquareUp'
+import { FaCaretUp } from '@react-icons/all-files/fa/FaCaretUp'
+import { FaChartArea } from '@react-icons/all-files/fa/FaChartArea'
+import { FaChartBar } from '@react-icons/all-files/fa/FaChartBar'
+import { FaChartLine } from '@react-icons/all-files/fa/FaChartLine'
+import { FaChartPie } from '@react-icons/all-files/fa/FaChartPie'
+import { FaCheck } from '@react-icons/all-files/fa/FaCheck'
+import { FaCheckCircle } from '@react-icons/all-files/fa/FaCheckCircle'
+import { FaCheckSquare } from '@react-icons/all-files/fa/FaCheckSquare'
+import { FaChevronCircleDown } from '@react-icons/all-files/fa/FaChevronCircleDown'
+import { FaChevronCircleLeft } from '@react-icons/all-files/fa/FaChevronCircleLeft'
+import { FaChevronCircleRight } from '@react-icons/all-files/fa/FaChevronCircleRight'
+import { FaChevronCircleUp } from '@react-icons/all-files/fa/FaChevronCircleUp'
+import { FaChevronDown } from '@react-icons/all-files/fa/FaChevronDown'
+import { FaChevronLeft } from '@react-icons/all-files/fa/FaChevronLeft'
+import { FaChevronRight } from '@react-icons/all-files/fa/FaChevronRight'
+import { FaChevronUp } from '@react-icons/all-files/fa/FaChevronUp'
+import { FaCircle } from '@react-icons/all-files/fa/FaCircle'
+import { FaClipboard } from '@react-icons/all-files/fa/FaClipboard'
+import { FaClipboardCheck } from '@react-icons/all-files/fa/FaClipboardCheck'
+import { FaClipboardList } from '@react-icons/all-files/fa/FaClipboardList'
+import { FaClock } from '@react-icons/all-files/fa/FaClock'
+import { FaClone } from '@react-icons/all-files/fa/FaClone'
+import { FaCloud } from '@react-icons/all-files/fa/FaCloud'
+import { FaCloudDownloadAlt } from '@react-icons/all-files/fa/FaCloudDownloadAlt'
+import { FaCloudUploadAlt } from '@react-icons/all-files/fa/FaCloudUploadAlt'
+import { FaCode } from '@react-icons/all-files/fa/FaCode'
+import { FaCog } from '@react-icons/all-files/fa/FaCog'
+import { FaCogs } from '@react-icons/all-files/fa/FaCogs'
+import { FaCoins } from '@react-icons/all-files/fa/FaCoins'
+import { FaColumns } from '@react-icons/all-files/fa/FaColumns'
+import { FaComment } from '@react-icons/all-files/fa/FaComment'
+import { FaCommentAlt } from '@react-icons/all-files/fa/FaCommentAlt'
+import { FaCommentDots } from '@react-icons/all-files/fa/FaCommentDots'
+import { FaCommentSlash } from '@react-icons/all-files/fa/FaCommentSlash'
+import { FaComments } from '@react-icons/all-files/fa/FaComments'
+import { FaCompress } from '@react-icons/all-files/fa/FaCompress'
+import { FaCopy } from '@react-icons/all-files/fa/FaCopy'
+import { FaCreditCard } from '@react-icons/all-files/fa/FaCreditCard'
+import { FaCube } from '@react-icons/all-files/fa/FaCube'
+import { FaCubes } from '@react-icons/all-files/fa/FaCubes'
+import { FaDatabase } from '@react-icons/all-files/fa/FaDatabase'
+import { FaDoorClosed } from '@react-icons/all-files/fa/FaDoorClosed'
+import { FaDoorOpen } from '@react-icons/all-files/fa/FaDoorOpen'
+import { FaEdit } from '@react-icons/all-files/fa/FaEdit'
+import { FaEllipsisH } from '@react-icons/all-files/fa/FaEllipsisH'
+import { FaEllipsisV } from '@react-icons/all-files/fa/FaEllipsisV'
+import { FaEnvelope } from '@react-icons/all-files/fa/FaEnvelope'
+import { FaEnvelopeOpen } from '@react-icons/all-files/fa/FaEnvelopeOpen'
+import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
+import { FaExchangeAlt } from '@react-icons/all-files/fa/FaExchangeAlt'
+import { FaExclamation } from '@react-icons/all-files/fa/FaExclamation'
+import { FaExclamationCircle } from '@react-icons/all-files/fa/FaExclamationCircle'
+import { FaExclamationTriangle } from '@react-icons/all-files/fa/FaExclamationTriangle'
+import { FaExpand } from '@react-icons/all-files/fa/FaExpand'
+import { FaExpandArrowsAlt } from '@react-icons/all-files/fa/FaExpandArrowsAlt'
+import { FaExternalLinkAlt } from '@react-icons/all-files/fa/FaExternalLinkAlt'
+import { FaEye } from '@react-icons/all-files/fa/FaEye'
+import { FaEyeSlash } from '@react-icons/all-files/fa/FaEyeSlash'
+import { FaFile } from '@react-icons/all-files/fa/FaFile'
+import { FaFileAlt } from '@react-icons/all-files/fa/FaFileAlt'
+import { FaFileArchive } from '@react-icons/all-files/fa/FaFileArchive'
+import { FaFileDownload } from '@react-icons/all-files/fa/FaFileDownload'
+import { FaFileExport } from '@react-icons/all-files/fa/FaFileExport'
+import { FaFileImport } from '@react-icons/all-files/fa/FaFileImport'
+import { FaFileUpload } from '@react-icons/all-files/fa/FaFileUpload'
+import { FaFilter } from '@react-icons/all-files/fa/FaFilter'
+import { FaFlag } from '@react-icons/all-files/fa/FaFlag'
+import { FaFolder } from '@react-icons/all-files/fa/FaFolder'
+import { FaFolderMinus } from '@react-icons/all-files/fa/FaFolderMinus'
+import { FaFolderOpen } from '@react-icons/all-files/fa/FaFolderOpen'
+import { FaFolderPlus } from '@react-icons/all-files/fa/FaFolderPlus'
+import { FaFont } from '@react-icons/all-files/fa/FaFont'
+import { FaForward } from '@react-icons/all-files/fa/FaForward'
+import { FaGift } from '@react-icons/all-files/fa/FaGift'
+import { FaGlobe } from '@react-icons/all-files/fa/FaGlobe'
+import { FaGraduationCap } from '@react-icons/all-files/fa/FaGraduationCap'
+import { FaGripHorizontal } from '@react-icons/all-files/fa/FaGripHorizontal'
+import { FaGripLines } from '@react-icons/all-files/fa/FaGripLines'
+import { FaGripLinesVertical } from '@react-icons/all-files/fa/FaGripLinesVertical'
+import { FaGripVertical } from '@react-icons/all-files/fa/FaGripVertical'
+import { FaHandPaper } from '@react-icons/all-files/fa/FaHandPaper'
+import { FaHandPointDown } from '@react-icons/all-files/fa/FaHandPointDown'
+import { FaHandPointLeft } from '@react-icons/all-files/fa/FaHandPointLeft'
+import { FaHandPointRight } from '@react-icons/all-files/fa/FaHandPointRight'
+import { FaHandPointUp } from '@react-icons/all-files/fa/FaHandPointUp'
+import { FaHands } from '@react-icons/all-files/fa/FaHands'
+import { FaHandshake } from '@react-icons/all-files/fa/FaHandshake'
+import { FaHeart } from '@react-icons/all-files/fa/FaHeart'
+import { FaHistory } from '@react-icons/all-files/fa/FaHistory'
+import { FaHome } from '@react-icons/all-files/fa/FaHome'
+import { FaHospital } from '@react-icons/all-files/fa/FaHospital'
+import { FaHospitalAlt } from '@react-icons/all-files/fa/FaHospitalAlt'
+import { FaHourglass } from '@react-icons/all-files/fa/FaHourglass'
+import { FaHourglassEnd } from '@react-icons/all-files/fa/FaHourglassEnd'
+import { FaHourglassHalf } from '@react-icons/all-files/fa/FaHourglassHalf'
+import { FaHourglassStart } from '@react-icons/all-files/fa/FaHourglassStart'
+import { FaIdBadge } from '@react-icons/all-files/fa/FaIdBadge'
+import { FaIdCard } from '@react-icons/all-files/fa/FaIdCard'
+import { FaIdCardAlt } from '@react-icons/all-files/fa/FaIdCardAlt'
+import { FaImage } from '@react-icons/all-files/fa/FaImage'
+import { FaImages } from '@react-icons/all-files/fa/FaImages'
+import { FaInbox } from '@react-icons/all-files/fa/FaInbox'
+import { FaInfo } from '@react-icons/all-files/fa/FaInfo'
+import { FaInfoCircle } from '@react-icons/all-files/fa/FaInfoCircle'
+import { FaKey } from '@react-icons/all-files/fa/FaKey'
+import { FaKeyboard } from '@react-icons/all-files/fa/FaKeyboard'
+import { FaLightbulb } from '@react-icons/all-files/fa/FaLightbulb'
+import { FaLink } from '@react-icons/all-files/fa/FaLink'
+import { FaList } from '@react-icons/all-files/fa/FaList'
+import { FaListAlt } from '@react-icons/all-files/fa/FaListAlt'
+import { FaListOl } from '@react-icons/all-files/fa/FaListOl'
+import { FaListUl } from '@react-icons/all-files/fa/FaListUl'
+import { FaLock } from '@react-icons/all-files/fa/FaLock'
+import { FaLockOpen } from '@react-icons/all-files/fa/FaLockOpen'
+import { FaLongArrowAltDown } from '@react-icons/all-files/fa/FaLongArrowAltDown'
+import { FaLongArrowAltLeft } from '@react-icons/all-files/fa/FaLongArrowAltLeft'
+import { FaLongArrowAltRight } from '@react-icons/all-files/fa/FaLongArrowAltRight'
+import { FaLongArrowAltUp } from '@react-icons/all-files/fa/FaLongArrowAltUp'
+import { FaMedkit } from '@react-icons/all-files/fa/FaMedkit'
+import { FaMinus } from '@react-icons/all-files/fa/FaMinus'
+import { FaMinusCircle } from '@react-icons/all-files/fa/FaMinusCircle'
+import { FaMinusSquare } from '@react-icons/all-files/fa/FaMinusSquare'
+import { FaMobile } from '@react-icons/all-files/fa/FaMobile'
+import { FaMobileAlt } from '@react-icons/all-files/fa/FaMobileAlt'
+import { FaMoneyBill } from '@react-icons/all-files/fa/FaMoneyBill'
+import { FaMoneyBillAlt } from '@react-icons/all-files/fa/FaMoneyBillAlt'
+import { FaMoneyBillWave } from '@react-icons/all-files/fa/FaMoneyBillWave'
+import { FaMoneyBillWaveAlt } from '@react-icons/all-files/fa/FaMoneyBillWaveAlt'
+import { FaMoneyCheck } from '@react-icons/all-files/fa/FaMoneyCheck'
+import { FaMoneyCheckAlt } from '@react-icons/all-files/fa/FaMoneyCheckAlt'
+import { FaPaperPlane } from '@react-icons/all-files/fa/FaPaperPlane'
+import { FaPaperclip } from '@react-icons/all-files/fa/FaPaperclip'
+import { FaPaste } from '@react-icons/all-files/fa/FaPaste'
+import { FaPen } from '@react-icons/all-files/fa/FaPen'
+import { FaPencilAlt } from '@react-icons/all-files/fa/FaPencilAlt'
+import { FaPhone } from '@react-icons/all-files/fa/FaPhone'
+import { FaPhoneSlash } from '@react-icons/all-files/fa/FaPhoneSlash'
+import { FaPiggyBank } from '@react-icons/all-files/fa/FaPiggyBank'
+import { FaPlane } from '@react-icons/all-files/fa/FaPlane'
+import { FaPlay } from '@react-icons/all-files/fa/FaPlay'
+import { FaPlayCircle } from '@react-icons/all-files/fa/FaPlayCircle'
+import { FaPlus } from '@react-icons/all-files/fa/FaPlus'
+import { FaPlusCircle } from '@react-icons/all-files/fa/FaPlusCircle'
+import { FaPlusSquare } from '@react-icons/all-files/fa/FaPlusSquare'
+import { FaPoll } from '@react-icons/all-files/fa/FaPoll'
+import { FaPollH } from '@react-icons/all-files/fa/FaPollH'
+import { FaPortrait } from '@react-icons/all-files/fa/FaPortrait'
+import { FaPowerOff } from '@react-icons/all-files/fa/FaPowerOff'
+import { FaPrint } from '@react-icons/all-files/fa/FaPrint'
+import { FaQrcode } from '@react-icons/all-files/fa/FaQrcode'
+import { FaQuestion } from '@react-icons/all-files/fa/FaQuestion'
+import { FaQuestionCircle } from '@react-icons/all-files/fa/FaQuestionCircle'
+import { FaRandom } from '@react-icons/all-files/fa/FaRandom'
+import { FaReceipt } from '@react-icons/all-files/fa/FaReceipt'
+import { FaRedo } from '@react-icons/all-files/fa/FaRedo'
+import { FaRedoAlt } from '@react-icons/all-files/fa/FaRedoAlt'
+import { FaRegDotCircle } from '@react-icons/all-files/fa/FaRegDotCircle'
+import { FaReply } from '@react-icons/all-files/fa/FaReply'
+import { FaReplyAll } from '@react-icons/all-files/fa/FaReplyAll'
+import { FaRocket } from '@react-icons/all-files/fa/FaRocket'
+import { FaSave } from '@react-icons/all-files/fa/FaSave'
+import { FaSearch } from '@react-icons/all-files/fa/FaSearch'
+import { FaSearchMinus } from '@react-icons/all-files/fa/FaSearchMinus'
+import { FaSearchPlus } from '@react-icons/all-files/fa/FaSearchPlus'
+import { FaShare } from '@react-icons/all-files/fa/FaShare'
+import { FaShareAlt } from '@react-icons/all-files/fa/FaShareAlt'
+import { FaShareSquare } from '@react-icons/all-files/fa/FaShareSquare'
+import { FaShieldAlt } from '@react-icons/all-files/fa/FaShieldAlt'
+import { FaShoppingBag } from '@react-icons/all-files/fa/FaShoppingBag'
+import { FaShoppingBasket } from '@react-icons/all-files/fa/FaShoppingBasket'
+import { FaShoppingCart } from '@react-icons/all-files/fa/FaShoppingCart'
+import { FaSignInAlt } from '@react-icons/all-files/fa/FaSignInAlt'
+import { FaSignOutAlt } from '@react-icons/all-files/fa/FaSignOutAlt'
+import { FaSlidersH } from '@react-icons/all-files/fa/FaSlidersH'
+import { FaSort } from '@react-icons/all-files/fa/FaSort'
+import { FaSortAlphaDown } from '@react-icons/all-files/fa/FaSortAlphaDown'
+import { FaSortAlphaUp } from '@react-icons/all-files/fa/FaSortAlphaUp'
+import { FaSortAmountDown } from '@react-icons/all-files/fa/FaSortAmountDown'
+import { FaSortAmountUp } from '@react-icons/all-files/fa/FaSortAmountUp'
+import { FaSortDown } from '@react-icons/all-files/fa/FaSortDown'
+import { FaSortNumericDown } from '@react-icons/all-files/fa/FaSortNumericDown'
+import { FaSortNumericUp } from '@react-icons/all-files/fa/FaSortNumericUp'
+import { FaSortUp } from '@react-icons/all-files/fa/FaSortUp'
+import { FaStar } from '@react-icons/all-files/fa/FaStar'
+import { FaStepBackward } from '@react-icons/all-files/fa/FaStepBackward'
+import { FaStepForward } from '@react-icons/all-files/fa/FaStepForward'
+import { FaStickyNote } from '@react-icons/all-files/fa/FaStickyNote'
+import { FaStop } from '@react-icons/all-files/fa/FaStop'
+import { FaStopCircle } from '@react-icons/all-files/fa/FaStopCircle'
+import { FaStream } from '@react-icons/all-files/fa/FaStream'
+import { FaSubway } from '@react-icons/all-files/fa/FaSubway'
+import { FaSync } from '@react-icons/all-files/fa/FaSync'
+import { FaSyncAlt } from '@react-icons/all-files/fa/FaSyncAlt'
+import { FaTable } from '@react-icons/all-files/fa/FaTable'
+import { FaTablet } from '@react-icons/all-files/fa/FaTablet'
+import { FaTabletAlt } from '@react-icons/all-files/fa/FaTabletAlt'
+import { FaTachometerAlt } from '@react-icons/all-files/fa/FaTachometerAlt'
+import { FaTag } from '@react-icons/all-files/fa/FaTag'
+import { FaTags } from '@react-icons/all-files/fa/FaTags'
+import { FaTasks } from '@react-icons/all-files/fa/FaTasks'
+import { FaTaxi } from '@react-icons/all-files/fa/FaTaxi'
+import { FaTh } from '@react-icons/all-files/fa/FaTh'
+import { FaThLarge } from '@react-icons/all-files/fa/FaThLarge'
+import { FaThList } from '@react-icons/all-files/fa/FaThList'
+import { FaTimes } from '@react-icons/all-files/fa/FaTimes'
+import { FaTimesCircle } from '@react-icons/all-files/fa/FaTimesCircle'
+import { FaToolbox } from '@react-icons/all-files/fa/FaToolbox'
+import { FaTools } from '@react-icons/all-files/fa/FaTools'
+import { FaTrash } from '@react-icons/all-files/fa/FaTrash'
+import { FaTrashAlt } from '@react-icons/all-files/fa/FaTrashAlt'
+import { FaTrashRestore } from '@react-icons/all-files/fa/FaTrashRestore'
+import { FaTrashRestoreAlt } from '@react-icons/all-files/fa/FaTrashRestoreAlt'
+import { FaUndo } from '@react-icons/all-files/fa/FaUndo'
+import { FaUndoAlt } from '@react-icons/all-files/fa/FaUndoAlt'
+import { FaUnlink } from '@react-icons/all-files/fa/FaUnlink'
+import { FaUnlock } from '@react-icons/all-files/fa/FaUnlock'
+import { FaUnlockAlt } from '@react-icons/all-files/fa/FaUnlockAlt'
+import { FaUser } from '@react-icons/all-files/fa/FaUser'
+import { FaUserAlt } from '@react-icons/all-files/fa/FaUserAlt'
+import { FaUserAltSlash } from '@react-icons/all-files/fa/FaUserAltSlash'
+import { FaUserCheck } from '@react-icons/all-files/fa/FaUserCheck'
+import { FaUserCircle } from '@react-icons/all-files/fa/FaUserCircle'
+import { FaUserClock } from '@react-icons/all-files/fa/FaUserClock'
+import { FaUserCog } from '@react-icons/all-files/fa/FaUserCog'
+import { FaUserEdit } from '@react-icons/all-files/fa/FaUserEdit'
+import { FaUserMinus } from '@react-icons/all-files/fa/FaUserMinus'
+import { FaUserPlus } from '@react-icons/all-files/fa/FaUserPlus'
+import { FaUserSlash } from '@react-icons/all-files/fa/FaUserSlash'
+import { FaUsers } from '@react-icons/all-files/fa/FaUsers'
+import { FaUsersCog } from '@react-icons/all-files/fa/FaUsersCog'
+import { FaVideo } from '@react-icons/all-files/fa/FaVideo'
+import { FaVideoSlash } from '@react-icons/all-files/fa/FaVideoSlash'
+import { FaVolumeDown } from '@react-icons/all-files/fa/FaVolumeDown'
+import { FaVolumeMute } from '@react-icons/all-files/fa/FaVolumeMute'
+import { FaVolumeOff } from '@react-icons/all-files/fa/FaVolumeOff'
+import { FaVolumeUp } from '@react-icons/all-files/fa/FaVolumeUp'
+import { FaWallet } from '@react-icons/all-files/fa/FaWallet'
+import { FaWindowClose } from '@react-icons/all-files/fa/FaWindowClose'
+import { FaWindowMaximize } from '@react-icons/all-files/fa/FaWindowMaximize'
+import { FaWindowMinimize } from '@react-icons/all-files/fa/FaWindowMinimize'
+import { FaWindowRestore } from '@react-icons/all-files/fa/FaWindowRestore'
+import { FaWrench } from '@react-icons/all-files/fa/FaWrench'
+import { FaYenSign } from '@react-icons/all-files/fa/FaYenSign'
+import type { IconType } from '@react-icons/all-files'
 import styled from 'styled-components'
 import { VISUALLY_HIDDEN_STYLE } from '../../constants'
 import { useTheme } from '../../hooks/useTheme'
