@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Story } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import styled from 'styled-components'
+import dayjs from 'dayjs'
 
 import { Calendar } from './Calendar'
 
@@ -13,6 +14,7 @@ export default {
 export const All: Story = () => {
   const [value, setValue] = useState(new Date(2020, 0, 1))
   const [value2, setValue2] = useState(new Date(2020, 0, 20))
+  const [value3, setValue3] = useState(new Date(2020, 0, 30))
   return (
     <List>
       <dt>Default</dt>
@@ -36,6 +38,26 @@ export const All: Story = () => {
             setValue2(date)
           }}
           value={value2}
+        />
+      </dd>
+      <dt>You can set specific date format.</dt>
+      <dd>
+        <Calendar
+          from={new Date(2020, 0, 10)}
+          to={new Date(2020, 1, 10)}
+          onSelectDate={(e, date) => {
+            action('selected')(e, date)
+            setValue3(date)
+          }}
+          value={value3}
+          formatDate={(date) => {
+            const eraYear = new Intl.DateTimeFormat('ja-JP-u-ca-japanese', {
+              era: 'long',
+              year: 'numeric',
+            }).format(date)
+
+            return dayjs(date).format(`YYYY年(${eraYear})M月`)
+          }}
         />
       </dd>
     </List>

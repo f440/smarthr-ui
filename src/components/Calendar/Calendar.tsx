@@ -20,11 +20,13 @@ type Props = {
   onSelectDate: (e: MouseEvent, date: Date) => void
   /** 選択された日付 */
   value?: Date
+  /** 表示する日付を独自にフォーマットする場合に、フォーマット処理を記述する関数 */
+  formatDate?: (date: Date) => string
 }
 type ElementProps = Omit<HTMLAttributes<HTMLElement>, keyof Props>
 
 export const Calendar = forwardRef<HTMLElement, Props & ElementProps>(
-  ({ from, to, onSelectDate, value, ...props }, ref) => {
+  ({ from, to, onSelectDate, value, formatDate, ...props }, ref) => {
     const themes = useTheme()
     const classNames = useClassNames()
     const now = dayjs().startOf('date')
@@ -55,7 +57,7 @@ export const Calendar = forwardRef<HTMLElement, Props & ElementProps>(
       >
         <Header themes={themes} className={classNames.calendar.header}>
           <YearMonth className={classNames.calendar.yearMonth}>
-            {currentMonth.year()}年{currentMonth.month() + 1}月
+            {formatDate ? formatDate(currentMonth.toDate()) : currentMonth.format(`YYYY年M月`)}
           </YearMonth>
           <Button
             onClick={(e) => {
