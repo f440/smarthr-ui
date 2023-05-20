@@ -76,13 +76,13 @@ export {
   BulkActionRow,
   EmptyTableBody,
 } from './components/Table'
-export {
-  AppNavi,
+export type {
   AppNaviAnchorProps,
   AppNaviButtonProps,
   AppNaviDropdownProps,
   AppNaviCustomTagProps,
 } from './components/AppNavi'
+export { AppNavi } from './components/AppNavi'
 export { TabBar, TabItem } from './components/TabBar'
 export { Heading } from './components/Heading'
 export { HeadlineArea } from './components/HeadlineArea'
@@ -102,13 +102,11 @@ export { BottomFixedArea } from './components/BottomFixedArea'
 export { MessageScreen } from './components/MessageScreen'
 export { Calendar } from './components/Calendar'
 export { DatePicker } from './components/DatePicker'
-export { SegmentedControl, SegmentedControlOption } from './components/SegmentedControl'
+export type { SegmentedControlOption } from './components/SegmentedControl'
+export { SegmentedControl } from './components/SegmentedControl'
 export { FormGroup } from './components/FormGroup'
-export {
-  BackgroundJobsPanel,
-  BackgroundJobsList,
-  BackgroundJobProps,
-} from './components/BackgroundJobsPanel'
+export type { BackgroundJobProps } from './components/BackgroundJobsPanel'
+export { BackgroundJobsPanel, BackgroundJobsList } from './components/BackgroundJobsPanel'
 export { MultiComboBox, SingleComboBox } from './components/ComboBox'
 export { SideNav } from './components/SideNav'
 export { CompactInformationPanel } from './components/CompactInformationPanel'
