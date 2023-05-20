@@ -1,5 +1,6 @@
 import path from 'path'
-import { StorybookConfig } from '@storybook/react-webpack5'
+import { mergeConfig } from 'vite'
+import { StorybookConfig } from '@storybook/react-vite'
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.tsx'],
@@ -32,8 +33,17 @@ const config: StorybookConfig = {
     },
   },
   framework: {
-    name: '@storybook/react-webpack5',
+    name: '@storybook/react-vite',
     options: {},
+  },
+  async viteFinal(config) {
+    // Merge custom configuration into the default config
+    return mergeConfig(config, {
+      // Add storybook-specific dependencies to pre-optimization
+      // optimizeDeps: {
+      //   include: ['storybook-addon-designs'],
+      // },
+    })
   },
   docs: {
     autodocs: true,
