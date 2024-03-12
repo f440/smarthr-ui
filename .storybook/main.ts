@@ -32,6 +32,11 @@ const config: StorybookConfig = {
           {
             test: /\.css$/,
             use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: { importLoaders: 1 },
+              },
               {
                 // Gets options from `postcss.config.js` in your project root
                 loader: 'postcss-loader',
@@ -44,7 +49,6 @@ const config: StorybookConfig = {
     },
     'storybook-addon-pseudo-states',
     '@storybook/addon-webpack5-compiler-babel',
-    '@storybook/addon-styling-webpack',
   ],
   refs: {
     'smarthr-patterns': {
