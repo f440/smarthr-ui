@@ -5,6 +5,7 @@
   "author": "SmartHR-UI Team",
   "dependencies": {
     "@smarthr/wareki": "^1.2.0",
+    "@storybook/manager-api": "^8.0.0",
     "@storybook/test": "^8.0.0",
     "dayjs": "^1.11.10",
     "lodash.merge": "^4.6.2",
@@ -31,7 +32,6 @@
     "@storybook/addon-storysource": "^8.0.0",
     "@storybook/addon-styling-webpack": "^0.0.6",
     "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
-    "@storybook/addons": "^7.6.17",
     "@storybook/cli": "^8.0.0",
     "@storybook/react": "^8.0.0",
     "@storybook/react-webpack5": "^8.0.0",
